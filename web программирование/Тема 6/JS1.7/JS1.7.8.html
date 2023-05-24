@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Фильтр почты</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="filterInput" placeholder="Фильтр почты">
+  <ul id="emailList">
+    <li>example1@gmail.com</li>
+    <li>example2@yahoo.com</li>
+    <li>example3@hotmail.com</li>
+    <li>example4@gmail.com</li>
+    <li>example5@yahoo.com</li>
+  </ul>
+  <script>
+    let filterInput = document.getElementById('filterInput');
+    let emailList = document.getElementById('emailList').getElementsByTagName('li');
+
+    filterInput.addEventListener('input', function() {
+      let filterValue = filterInput.value.toLowerCase();
+
+      for (let i = 0; i < emailList.length; i++) {
+        let email = emailList[i].textContent.toLowerCase();
+
+        if (email.includes(filterValue)) {
+          emailList[i].classList.remove('hidden');
+        } else {
+          emailList[i].classList.add('hidden');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
