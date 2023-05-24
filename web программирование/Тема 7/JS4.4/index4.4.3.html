@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello React</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+  class Timer extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { seconds: 0 };
+    }
+
+    componentDidMount() {
+      this.timerID = setInterval(() => {
+        this.setState((prevState) => ({
+          seconds: prevState.seconds + 1
+        }));
+      }, 1000);
+    }
+
+    componentWillUnmount() {
+      clearInterval(this.timerID);
+    }
+
+    render() {
+      return <h1>Seconds: {this.state.seconds}</h1>;
+    }
+  }
+
+  ReactDOM.render(<Timer />, document.getElementById('root'));
+</script>
+</body>
+</html>
