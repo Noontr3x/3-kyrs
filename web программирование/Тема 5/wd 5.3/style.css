@@ -1,0 +1,13 @@
+/* Стили для компонента Carousel */
+#myCarousel .carousel-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px; /* Задайте нужную высоту */
+}
+
+/* Стили для компонента Card */
+.myCard .card-img-top {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px; /* Задайте нужную высоту */
+}
