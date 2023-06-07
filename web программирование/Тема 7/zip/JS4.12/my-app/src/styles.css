@@ -1,0 +1,29 @@
+/* Пример стилей */
+.App {
+    text-align: center;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product {
+    margin: 10px;
+    padding: 20px;
+    border: none; /* Убираем обводку */
+    background-color: lightblue; /* Экспериментируйте с цветом плашек */
+  }
+  
+  .product img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  /* Другие стили... */
+  
