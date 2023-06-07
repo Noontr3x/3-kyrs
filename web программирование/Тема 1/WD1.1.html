@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Форма опроса</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Форма опроса</h1>
+	<p>Заполните форму ниже, чтобы принять участие в опросе:</p>
+	<form>
+		<label for="name">Имя:</label>
+		<input type="text" id="name" name="name" required><br><br>
+
+		<label for="email">Электронная почта:</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<label for="age">Возраст:</label>
+		<input type="number" id="age" name="age" required><br><br>
+
+		<label for="gender">Пол:</label>
+		<select id="gender" name="gender" required>
+			<option value="">Выберите пол</option>
+			<option value="male">Мужской</option>
+			<option value="female">Женский</option>
+			<option value="other">Другой</option>
+		</select><br><br>
+
+		<label>Как часто вы занимаетесь физическими упражнениями?</label><br>
+		<input type="radio" id="often" name="exercise" value="often" required>
+		<label for="often">Часто</label><br>
+		<input type="radio" id="sometimes" name="exercise" value="sometimes">
+		<label for="sometimes">Иногда</label><br>
+		<input type="radio" id="rarely" name="exercise" value="rarely">
+		<label for="rarely">Редко</label><br><br>
+
+		<label for="feedback">Оставьте свой комментарий:</label><br>
+		<textarea id="feedback" name="feedback" rows="5" cols="30"></textarea><br><br>
+
+		<input type="submit" value="Отправить">
+	</form>
+</body>
+</html>
